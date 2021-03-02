@@ -25,7 +25,7 @@ while (s2[str2])
 str2++;
 
 if (s1 && s2)
-str = malloc(sizeof(str) * str1 + str2);
+str = malloc(sizeof(str) * (str1 + str2) + 1);
 
 if (!str)
 return (NULL);
