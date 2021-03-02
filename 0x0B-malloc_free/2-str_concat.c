@@ -24,6 +24,7 @@ str1++;
 while (s2[str2])
 str2++;
 
+if (s1 && s2)
 str = malloc(sizeof(str) * str1 + str2);
 
 if (!str)
@@ -31,8 +32,6 @@ return (NULL);
 
 for (i = 0; i < (str1 + str2); i++)
 str[i] = i < str1 ? s1[i] : s2[j++];
-
-str[++i] = '\0';
 
 return (str);
 }
