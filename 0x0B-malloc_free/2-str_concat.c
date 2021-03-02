@@ -32,7 +32,7 @@ return (NULL);
 for (i = 0; i < (str1 + str2); i++)
 str[i] = i < str1 ? s1[i] : s2[j++];
 
-str[i] = '\0';
+str[i++] = '\0';
 
 return (str);
 }
