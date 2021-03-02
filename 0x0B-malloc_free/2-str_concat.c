@@ -26,7 +26,7 @@ str2++;
 
 str2++;
 
-str = malloc(sizeof(str) * (str1 + str2));
+str = malloc(sizeof(char) * (str1 + str2));
 
 if (str == NULL)
 return (NULL);
