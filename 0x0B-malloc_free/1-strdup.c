@@ -8,27 +8,24 @@
 
 char *_strdup(char *str)
 {
-char *str_copy, *str_ptr, *temp;
-int i = 0;
+int i = 1;
+char *str_copy;
 
 if (!str)
 return (NULL);
 
-temp = str;
-
-while (i < str[i])
+while (str[i])
 i++;
 
-str_copy = malloc(sizeof(*str) * (i + 1));
+str_copy = malloc((sizeof(char) * i) +1);
 
-if (str_copy == NULL)
+if (!str_copy)
 return (NULL);
 
-str_ptr = str_copy;
-while (*temp)
-*str_copy++ = *temp++;
+for (i = 0; str[i]; i++)
+str_copy[i] = str[i];
 
-*str_copy = '\0';
+str_copy[i] = '\0';
 
-return (str_ptr);
+return (str_copy);
 }
