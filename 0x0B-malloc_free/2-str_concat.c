@@ -22,9 +22,9 @@ while (s1[str1])
 str1++;
 
 while (s2[str2])
-++str2;
+str2++;
 
-str = malloc(sizeof(char) * (str1 + str2));
+str = malloc(sizeof(char) * (str1 + str2) +1);
 
 if (str == NULL)
 return (NULL);
