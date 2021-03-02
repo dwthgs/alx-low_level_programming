@@ -27,11 +27,11 @@ str2++;
 if (s1 && s2)
 str = malloc(sizeof(str) * (str1 + str2));
 
-if (!str)
+if (str == NULL)
 return (NULL);
 
 for (i = 0; i < (str1 + str2); i++)
-str[i] = i <= str1 ? s1[i] : s2[j++];
+str[i] = i < str1 ? s1[i] : s2[j++];
 
 return (str);
 }
