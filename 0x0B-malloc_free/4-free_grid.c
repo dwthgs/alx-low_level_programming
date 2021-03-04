@@ -8,10 +8,13 @@
 
 void free_grid(int **grid, int height)
 {
-unsigned int i;
+int i = 0;
 
-for (i = 0; i < height; i++)
-free(grid[i]);
+if (!grid || height <= 0)
+return;
+
+while (i < height)
+free(grid[i++]);
 
 free(grid);
 }
