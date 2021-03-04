@@ -9,8 +9,8 @@
 
 int **alloc_grid(int width, int height)
 {
-int i, c;
-int **s;
+unsigned int i, c;
+unsigned int **s;
 
 if (width <= 0 || height <= 0)
 return (NULL);
