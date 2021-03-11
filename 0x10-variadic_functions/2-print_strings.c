@@ -1,7 +1,6 @@
-#include "variadic_functions.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
+#include "variadic_functions.h"
 
 /**
  * print_numbers - prints strings
@@ -9,7 +8,7 @@
  * @n: int
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list valist;
 unsigned int i;
