@@ -8,21 +8,26 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-va_list ab;
+va_list valist;
 unsigned int i;
-char *s;
+char *str;
 
-va_start(ab, n);
+if (separator == NULL)
+return;
+
+va_start(valist, n);
+
 for (i = 0; i < n; i++)
 {
-s = va_arg(ab, char *);
-if (!s)
-printf("(nil)");
-if (s)
-printf("%s", s);
-if (separator && i < n - 1)
+str = va_arg(valist, char *);
+if (str == NULL)
+str = "(nil)";
+
+printf("%s", str);
+if (i != (n - 1))
 printf("%s", separator);
 }
 printf("\n");
-va_end(ab);
+
+va_end(valist);
 }
