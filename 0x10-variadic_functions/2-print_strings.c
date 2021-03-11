@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - prints strings
+ * print_strings - prints strings
  * @separator: char
  * @n: int
  */
@@ -14,7 +14,7 @@ va_list valist;
 unsigned int i;
 char *str;
 
-if (separator == NULL)
+if (!separator)
 return;
 
 va_start(valist, n);
