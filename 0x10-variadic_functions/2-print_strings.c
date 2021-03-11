@@ -14,7 +14,7 @@ va_list valist;
 unsigned int i;
 char *str;
 
-if (!separator)
+if (separator == NULL)
 return;
 
 va_start(valist, n);
@@ -22,12 +22,15 @@ va_start(valist, n);
 for (i = 0; i < n; i++)
 {
 str = va_arg(valist, char *);
-if (!str)
+if (str == NULL)
+{
 str = "(nil)";
-
+}
 printf("%s", str);
 if (i != (n - 1))
+{
 printf("%s", separator);
+}
 }
 printf("\n");
 
