@@ -22,7 +22,7 @@ va_start(valist, n);
 for (i = 0; i < n; i++)
 {
 str = va_arg(valist, char *);
-if (str == NULL)
+if (!str)
 str = "(nil)";
 
 printf("%s", str);
@@ -33,4 +33,3 @@ printf("\n");
 
 va_end(valist);
 }
-
